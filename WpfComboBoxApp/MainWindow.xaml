@@ -1,0 +1,48 @@
+﻿<Window x:Class="WpfComboBoxApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfComboBoxApp"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <StackPanel Width="500">
+        <ComboBox x:Name="combo" 
+                  FontSize="30"
+                  IsEditable="True">
+            <ComboBoxItem>
+                Item 1
+            </ComboBoxItem>
+            <TextBlock>Item 2</TextBlock>
+            <ComboBoxItem>
+                <TextBlock>Item 3</TextBlock>
+            </ComboBoxItem>
+            <ComboBoxItem>
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="/PNG.png" Width="30"/>
+                    <TextBlock>PNG Image</TextBlock>
+                </StackPanel>
+            </ComboBoxItem>
+            <StackPanel Orientation="Horizontal">
+                <Image Source="/WORD.png" Width="30"/>
+                <TextBlock>Word doc</TextBlock>
+            </StackPanel>
+        </ComboBox>
+        <ComboBox x:Name="comboCites"
+                  FontSize="30"
+                  Margin="0, 20"
+                  IsEditable="True"/>
+        <TabControl x:Name="tabs"
+                    FontSize="30">
+            <TabItem Header="Tab Text">
+                <TextBlock TextWrapping="Wrap"
+                           FontSize="20">
+                    позволяет TabControl свести к минимуму использование экранного пространства, позволяя приложению предоставлять большой объем данных. Состоит TabControl из нескольких TabItem объектов, которые совместно используют одно и то же пространство экрана. 
+                </TextBlock>
+            </TabItem>
+            <TabItem Header="Tab Image">
+                <Image Source="/TEXT.png" Width="150" />
+            </TabItem>
+        </TabControl>
+    </StackPanel>
+</Window>
